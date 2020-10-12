@@ -1,0 +1,2 @@
+1. npm install resemblejs
+2. npm install mz

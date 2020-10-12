@@ -1,0 +1,16 @@
+{
+  "name": "taller6",
+  "version": "1.0.0",
+  "description": "resemblejs",
+  "main": "index.js",
+  "dependencies": {
+    "mz": "^2.7.0",
+    "resemblejs": "^3.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

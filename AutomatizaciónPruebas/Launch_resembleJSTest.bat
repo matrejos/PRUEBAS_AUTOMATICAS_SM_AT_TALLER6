@@ -1,1 +1,0 @@
-cypress run --spec cypress/integration/VRT_colorPallete-master.spec.js --headless --browser chrome

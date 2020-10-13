@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Automatización ResembleJS</title>
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="main-content" class="container">
+      <h2>
+        <br />
+        ResembleJS Dashboard
+      </h2>
+      <div>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="runTest()">
+          Generar Reporte
+        </button>
+      </div>
+      <p>
+        <br />
+        A continuación se presentan los resultados obtenidos con cada una de las ejecuciones realizaddas de las pruebas con resembleJS.
+      </p>
+      <br />
+      <br />
+      <ul class="tests">
+        <li *ngFor="let test of tests; let i=index;">    
+          <span><strong>{{i+1}} - Fecha ejecucion: </strong>{{test.fecha_ejecucion}}</span>
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Screenshot 1</h5>
+                <img class="img-thumbnail" src="assets/{{test.imagen1}}" alt="{{test.imagen1}}" style="width: 200px; height: 150px;">
+                <p class="card-text"></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><strong>Informacion de la imagen: </strong><br />{{test.observacionesImagen1}}</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Screenshot 2</h5>
+                <img class="img-thumbnail" src="assets/{{test.imagen2}}" alt="{{test.imagen2}}" style="width: 200px; height: 150px;">
+                <p class="card-text"></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><strong>Informacion de la imagen: </strong><br />{{test.observacionesImagen2}}</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Diferencias</h5>
+                <img class="img-thumbnail" src="assets/{{test.imagen3}}" alt="{{test.imagen3}}" style="width: 200px; height: 150px;">
+                <p class="card-text"></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><strong>Informacion de la imagen: </strong><br />{{test.observacionesImagen3}}</small>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

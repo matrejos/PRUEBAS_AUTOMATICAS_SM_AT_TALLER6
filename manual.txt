@@ -1,2 +1,27 @@
-1. npm install resemblejs
-2. npm install mz
+================================================================================================
+				Prerrequisitos
+================================================================================================
+1. npm install cypress --save-dev
+2. In the "AutomatizaciónPruebas\backend\apps\resemble",	run "npm install resemblejs"
+3. In the "AutomatizaciónPruebas\backend\apps\resemble",	run "npm install mz"
+4. npm install - g @angular/cli
+5. cd AutomatizaciónPruebas/front/
+6. In the "AutomatizaciónPruebas\front\VRTColorPalleteTester", 	run "ng new VRTColorPalleteTester"
+7. In the "AutomatizaciónPruebas\backend", 			run "python manage.py migrate"
+8. In the "AutomatizaciónPruebas\backend", 			run "python manage.py makemigrations resemble"
+9. In the "AutomatizaciónPruebas\backend", 			run "python manage.py migrate"
+10.python -m pip install django-cors-headers
+
+================================================================================================
+				Corriendo la aplicación
+================================================================================================
+1. Correr Front: 	In the "AutomatizaciónPruebas\front\VRTColorPalleteTester", 	run "ng serve -o --poll=2000"
+2. Correr Backend: 	In the "AutomatizaciónPruebas\backend", 			run "python manage.py runserver 0.0.0.0:3001"
+3. Correr Celery:	In the "AutomatizaciónPruebas\backend", 			run "celery -A taskManager worker --pool=solo -l INFO"
+
+
+================================================================================================
+				Corriendo REDIS en Windows
+================================================================================================
+1. Correr servidor REDIS "C:\Users\ASUS\Documents\MAESTRIA\DESARROLLO CLOUD\REDIS\redis-server.exe --maxheap 2gb"
+
